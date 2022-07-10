@@ -86,9 +86,6 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=queit
 
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
-# install OMZ
-# sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -239,6 +236,8 @@ alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -500 | nl > ~
 #slant, lean, bubble, block, 
 # sleep 1 ???
 
-
+show_color() {
+    perl -e 'foreach $a(@ARGV){print "\e[48:2::".join(":",unpack("C*",pack("H*",$a)))."m \e[49m "};print "\n"' "$@"
+}
 
 #-----------------------------------------------------##-----------------------------------------------------#
