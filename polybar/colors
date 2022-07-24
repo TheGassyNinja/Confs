@@ -1,0 +1,14 @@
+;
+;
+
+
+[colors]
+background = #aa282a36
+background-alt = #373B41
+foreground = #8be9fd
+primary = #bd93f9
+secondary = #8be9fd
+alert = #A54242
+disabled = #707880
+
+
