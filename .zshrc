@@ -16,7 +16,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=queit
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -124,6 +124,14 @@ source $ZSH/oh-my-zsh.sh
 #-----------------------------------------------------#
 	#	Edits
 #-----------------------------------------------------#
+#Git
+alias gis='git status'
+alias gia='git add * *.*'
+alias gic='git commit -m "Under-Construction"'
+alias gip='git push'
+
+
+
 
 #---------------CFGs
  alias cfg-bash='vim ~/.bash_aliases'
@@ -149,9 +157,9 @@ source $ZSH/oh-my-zsh.sh
 	#	Personal Alises
 #-----------------------------------------------------#
 
- alias c='clear'
-alias cl='clear && la'
- #alias la='ls -A'
+alias c='clear'
+alias cl='clear && neofetch --config ~/.config/neofetch/colorsonly.conf && la'
+
 
 ## Useful aliases
 # Replace ls with exa
@@ -162,8 +170,7 @@ alias lt='exa -aT --color=always --group-directories-first --icons' # tree listi
 alias l.="exa -a | egrep '^\.'"                                     # show only dotfiles
 alias ip="ip -color"
 
- 
- 
+alias cn='clear && neofetch' 
  
  
  alias br='source ~/.bashrc'
@@ -240,4 +247,5 @@ show_color() {
     perl -e 'foreach $a(@ARGV){print "\e[48:2::".join(":",unpack("C*",pack("H*",$a)))."m \e[49m "};print "\n"' "$@"
 }
 
+neofetch
 #-----------------------------------------------------##-----------------------------------------------------#
