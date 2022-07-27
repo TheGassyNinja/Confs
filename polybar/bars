@@ -1,12 +1,6 @@
-;       ________         ______                      _   ___         _      
-;      /_  __/ /_  ___  / ____/___ _____________  __/ | / (_)___    (_)___ _
-;       / / / __ \/ _ \/ / __/ __ `/ ___/ ___/ / / /  |/ / / __ \  / / __ `/
-;      / / / / / /  __/ /_/ / /_/ (__  |__  ) /_/ / /|  / / / / / / / /_/ / 
-;     /_/ /_/ /_/\___/\____/\__,_/____/____/\__, /_/ |_/_/_/ /_/_/ /\__,_/  
-;                                          /____/             /___/         
-;
 
-[bar/main]
+
+[bar/left]
 monitor = HDMI-1
 monitor-fallback = eDP-1
 monitor-strict = false
@@ -15,37 +9,81 @@ overide-redirect = false
 
 bottom = false
 
-width = 100%
-height = 24pt
+fixed-center = false
+
+width = 38%
+height = 3%
+
 radius = 12
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 3pt
-border-size = 4pt
-border-color = #00000000
+line-size = 2pt
+border-size = 3pt
 
 padding-left = 0
-padding-right = 1
+padding-right = 0
 
-module-margin = 1
+offset-x = 60
+offset-y = 0%
 
-separator = |
-separator-forground = ${colors.disabled}
 
-font-0 = monospace;2
+font-0 = "UbuntuMono Nerd Font:size=15;2"
 
-modules-left = xworkspaces xwindow
-modules-right = filesystem pulseaudio memory cpu wlan date
+
+modules-left = i3 
 
 cursor-click = pointer
 cursor-scroll = ns-resize
 
 enable-ipc = true
 
-; wm-restack = i3
+wm-restack = i3
 
 screenchange-reload = true
 pseudo-transparency = true
+
+
+[bar/mid]
+monitor = HDMI-1
+monitor-fallback = eDP-1
+monitor-strict = false
+
+overide-redirect = false
+
+bottom = false
+
+fixed-center = false
+
+width = 20%
+height = 3%
+offset-x = 39%
+offset-y = 0%
+
+radius = 12
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+font-0 = "UbuntuMono Nerd Font:size=15;2"
+
+line-size = 2pt
+border-size = 3pt
+
+padding-left = 0
+padding-right = 0
+
+modules-center = date
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+enable-ipc = true
+
+wm-restack = i3
+
+screenchange-reload = true
+pseudo-transparency = true
+
 
