@@ -20,6 +20,7 @@ call plug#begin()
 	Plug 'vimwiki/vimwiki'
 	"Themes
 	Plug 'dracula/vim', { 'as': 'dracula' }
+	Plug 'vim-airline/vim-airline'
 	Plug 'mcchrish/zenbones.nvim'
 	Plug 'pablopunk/sick.vim'
 	"Nerdtree	
@@ -29,8 +30,8 @@ call plug#begin()
 	
 	Plug 'vifm/vifm' "Learn!!
 	Plug 'vifm/vifm-colors'
-	
-	
+	Plug 'ap/vim-css-color'	
+	Plug 'chrisbra/Colorizer'	
 	
 call plug#end()
 
@@ -44,7 +45,7 @@ noremap <leader>P "*p
 
 " PlugInstall
 noremap <leader>PI :PlugInstall
-
+noremap <leader>co :ColorToggle
 "--------------------------------->> Insert Mode
 " ii escapes to Normal
 inoremap ii <Esc>
@@ -65,14 +66,13 @@ nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 "  Start NERDTree and put cursor in doc
-"  autocmd VimEnter * NERDTree | wincmd p
-" ADD REST!!
+autocmd VimEnter * NERDTree 
 
 " set show .files "Shift+i or I to toggle
-let NERDTreeShowHidden=0	
+let NERDTreeShowHidden=1	
 
 " :color
-colorscheme industry
+colorscheme dracula
 "-------------------------------------------------------<<<
 
 "

@@ -159,11 +159,12 @@ alias gip='git push'
 
 alias c='clear'
 alias cl='clear && neofetch --config ~/.config/neofetch/colorsonly.conf && la'
-
+alias cb='neofetch --config ~/.config/neofetch/colorsonly.conf'
+alias Gas='inxi -Mxxx && inxi -Sxxx && inxi -Ixxx &&inxi -Gxxx && inxi -Axxx'
 
 ## Useful aliases
 # Replace ls with exa
-alias ls='exa -al --color=always --group-directories-first --icons' # preferred listing
+alias ls='cb && exa -al --color=always --group-directories-first --icons' # preferred listing
 alias la='exa -a --color=always --group-directories-first --icons'  # all files and dirs
 alias ll='exa -l --color=always --group-directories-first --icons'  # long format
 alias lt='exa -aT --color=always --group-directories-first --icons' # tree listing
@@ -180,7 +181,7 @@ alias cn='clear && neofetch'
  alias LIP='echo $LIP'
  alias ~='cd ~'
  alias pac='sudo pacman -S'
-
+ alias update='sudo pacman -Syu'
 
 #---------------------#
 	#System Info
